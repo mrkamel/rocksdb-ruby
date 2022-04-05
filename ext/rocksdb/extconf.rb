@@ -2,6 +2,7 @@ require "mkmf"
 
 dir_config('rocksdb')
 RbConfig::CONFIG["CPP"] = "g++ -E -std=gnu++11"
+RbConfig::CONFIG["CC"] = "g++ -std=gnu++11"
 
 DEBUG_BUILD = have_library('rocksdb_debug') || ENV["DEBUG_LEVEL"]
 
